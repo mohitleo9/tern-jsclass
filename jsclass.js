@@ -89,6 +89,11 @@
   var defs = {
     "!name": "jsclass",
     "!define": {
+      "!known_modules": {
+	"JSClass": {
+	  "!type": "JS"
+	},
+      },
     },
     "JS": {
       "class": {

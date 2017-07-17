@@ -1,0 +1,23 @@
+{
+  "name": "tern-jsclass",
+  "version": "0.0.0",
+  "description": "tern-plugin for jsclass",
+  "main": "jsclass.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohitleo9/tern-jsclass.git"
+  },
+  "keywords": [
+    "tern",
+    "jsclass"
+  ],
+  "author": "mohit@roadmunk.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohitleo9/tern-jsclass/issues"
+  },
+  "homepage": "https://github.com/mohitleo9/tern-jsclass#readme"
+}

@@ -5,10 +5,10 @@
 	if (typeof define == 'function' && define.amd) // AMD
 	    return define([ 'tern/lib/infer', 'tern/lib/tern' ], mod);
 	mod(tern, tern);
-})(function(infer, tern) {
-	'use strict';
+})(mod);
 
-	tern.registerPlugin('jsclass', function(server, options) {
+function mod(infer, tern) {
+	tern.registerPlugin('jsclass', function(server) {
 	    server.addDefs(defs);
 	});
 
@@ -99,4 +99,4 @@
 		  },
 	    },
 	};
-});
+};

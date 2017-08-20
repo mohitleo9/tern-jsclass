@@ -18,4 +18,16 @@ const Simple = JS.class('Simple', {
 			persistable : true,
 		},
 	},
+
+	static : {
+		fields : {
+			current : {
+				type : Number,
+			},
+		},
+
+		methods : {
+			st : function() { },
+		},
+	},
 });

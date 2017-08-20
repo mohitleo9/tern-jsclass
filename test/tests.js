@@ -34,4 +34,17 @@ describe('tern-jsclass', function() {
 			});
 		});
 	});
+
+	describe('static methods', function() {
+		it('should be picked up', function() {
+			const options = {
+				server,
+				fileName   : 'simple.js',
+				expression : 'Simple.',
+			};
+			queryCompletion(options).then(function(res) {
+				expect(getCompletionNames(res)).to.include.members([ 'st', 'current' ]);
+			});
+		});
+	});
 });

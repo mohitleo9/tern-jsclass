@@ -1,6 +1,6 @@
 {
   "name": "tern-jsclass",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tern-plugin for jsclass",
   "main": "jsclass.js",
   "scripts": {

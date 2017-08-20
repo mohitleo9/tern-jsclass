@@ -68,10 +68,8 @@ function mod(infer, tern) {
 	    if (args[0].getType() instanceof infer.Fn)
 		  // we are just extending props.
 		  customClass = args[0].getType();
-
 	    else
 		  customClass = new infer.Fn(getClassName(args, argNodes, cx), new infer.Obj(true), [], [], new infer.AVal());
-
 
 	    if (args.length <= 1)
 		  return customClass;
@@ -80,6 +78,8 @@ function mod(infer, tern) {
 	    const classPrototype = customClass.getProp('prototype').getType();
 
 	    propagateProperties(newProperties, classPrototype);
+
+	    propagateProperties(newProperties.getProp('static'), customClass);
 	    return customClass;
 	});
 

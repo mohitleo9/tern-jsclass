@@ -4,7 +4,7 @@
   "description": "tern-plugin for jsclass",
   "main": "jsclass.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/mohitleo9/tern-jsclass/issues"
   },
-  "homepage": "https://github.com/mohitleo9/tern-jsclass#readme"
+  "homepage": "https://github.com/mohitleo9/tern-jsclass#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "tern": "^0.21.0",
+    "uuid": "^3.1.0"
+  }
 }

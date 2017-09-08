@@ -40,20 +40,20 @@ function mod(infer, tern) {
 		  // the 'type' of this field that we are interested in.
 		  let typeAlreadySet;
 
-		  if (valType && valType.originNode && valType.hasProp('type')) {
-			destination.defProp(prop).addType(valType.getProp('type'));
-			typeAlreadySet = true;
-
-			// valType.originNode.properties.forEach(({ key, value }) => {
-			//   if (key.name && key.name === 'type') {
-			//     if (value.raw) {
-			//       destination.defProp(prop).addType(cx.str);
-			//       typeAlreadySet = true;
-			//     }
-			//   }
-			// });
-
-		  }
+		  // if (valType && valType.originNode && valType.hasProp('type')) {
+			// destination.defProp(prop).addType(valType.getProp('type'));
+			// typeAlreadySet = true;
+          //
+			// // valType.originNode.properties.forEach(({ key, value }) => {
+			// //   if (key.name && key.name === 'type') {
+			// //     if (value.raw) {
+			// //       destination.defProp(prop).addType(cx.str);
+			// //       typeAlreadySet = true;
+			// //     }
+			// //   }
+			// // });
+          //
+		  // }
 
 		  // connect the value to destination prop
 		  // destination.prop = val

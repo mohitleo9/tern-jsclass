@@ -88,8 +88,11 @@ function mod(infer, tern) {
 	    '!name'   : 'jsclass',
 	    '!define' : {
 		  '!known_modules' : {
-			JSClass : {
+			'JSClass' : {
 			      '!type' : 'JS',
+			},
+			'lib/promiseUtils' : {
+				'!type' : 'Promise',
 			},
 		  },
 	    },
@@ -97,6 +100,19 @@ function mod(infer, tern) {
 		  class : {
 			'!type' : 'fn(properties: ?) -> !custom:createCustomClass',
 		  },
+	    },
+	    'Promise' : {
+		    ajax : {
+			    '!type' : 'fn() -> +Promise',
+		    },
+
+		    wrapGenerator : {
+			    '!type' : 'fn() -> fn() -> +Promise',
+		    },
+
+		    loadModule : {
+			'!type' : 'fn() -> +Promise',
+		},
 	    },
 	};
 };

@@ -17,7 +17,30 @@ describe('tern-jsclass', function() {
 				expression : 'const s = new Simple(); s.',
 			};
 			queryCompletion(options).then(function(res) {
-				expect(getCompletionNames(res)).to.include.members([ 'method1', 'method2' ]);
+				expect(getCompletionNames(res)).to.include.members([ 'method1', 'method2', 'auth' ]);
+			});
+		});
+	});
+
+	describe('Promise', function() {
+		it('should add some methods', function() {
+			const options = {
+				server,
+				expression : 'Promise.',
+			};
+			queryCompletion(options).then(function(res) {
+				expect(getCompletionNames(res)).to.include.members([ 'ajax', 'wrapGenerator' ]);
+			});
+		});
+
+
+		it('should return correct type from methods', function() {
+			const options = {
+				server,
+				expression : 'Promise.ajax().',
+			};
+			queryCompletion(options).then(function(res) {
+				expect(getCompletionNames(res)).to.include.members([ 'ajax', 'wrapGenerator' ]);
 			});
 		});
 	});

@@ -4,6 +4,10 @@ const Simple = JS.class('Simple', {
 
 		method2 : function() {
 		},
+
+		auth : Promise.wrapGenerator(function*() {
+			return (yield Promise.ajax('/asdf')).data;
+		}),
 	},
 	fields : {
 		f1 : {

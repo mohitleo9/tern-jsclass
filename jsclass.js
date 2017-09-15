@@ -107,7 +107,7 @@ function mod(infer, tern) {
 		    },
 
 		    wrapGenerator : {
-			    '!type' : 'fn() -> fn() -> +Promise',
+			    '!type' : 'fn() -> Promise',
 		    },
 
 		    loadModule : {

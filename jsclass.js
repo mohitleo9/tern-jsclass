@@ -11,7 +11,7 @@ function mod(infer, tern) {
 	tern.registerPlugin('jsclass', function(server, configOptions) {
 		// we are using this for jsctags, so let's put a module object so that we can get module.exports
 		if (configOptions && 'jsctags' in configOptions)
-			defs.module = '';
+			defs.module = {};
 
 		server.addDefs(defs);
 	});

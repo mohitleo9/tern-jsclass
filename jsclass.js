@@ -8,8 +8,12 @@
 })(mod);
 
 function mod(infer, tern) {
-	tern.registerPlugin('jsclass', function(server) {
-	    server.addDefs(defs);
+	tern.registerPlugin('jsclass', function(server, configOptions) {
+		// we are using this for jsctags, so let's put a module object so that we can get module.exports
+		if (configOptions && 'jsctags' in configOptions)
+			defs.module = '';
+
+		server.addDefs(defs);
 	});
 
 	function getClassName(args, argNodes, cx) {
